@@ -1,34 +1,58 @@
 package org.omshinde.models;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 public class Event {
-    private String name;
-    private String date;
-    private String location;
+    private String title;
+    private LocalDate date;
+    private LocalTime startTime;
+    private LocalTime endTime;
 
-    public Event(String name, String date, String location) {
-        this.name = name;
-        this.date = date;
-        this.location = location;
+    public Event(String title, LocalDate date, LocalTime startTime, LocalTime endTime){
+        this.title=title;
+        this.date=date;
+        this.startTime=startTime;
+        this.endTime=endTime;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle(){
+        return title;
     }
 
-    public String getDate() {
+    public void setTitle(String title){
+        this.title=title;
+    }
+
+    public LocalDate getDate(){
         return date;
     }
 
-    public String getLocation() {
-        return location;
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
+    public LocalTime getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(LocalTime startTime) {
+        this.startTime = startTime;
+    }
+
+    public LocalTime getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(LocalTime endTime) {
+        this.endTime = endTime;
     }
 
     @Override
-    public String toString() {
-        return "Event{" +
-                "name='" + name + '\'' +
-                ", date='" + date + '\'' +
-                ", location='" + location + '\'' +
-                '}';
+    public String toString(){
+        StringBuilder stringBuilder=new StringBuilder();
+        stringBuilder.append("Title : ").append(title).append("\nDate : ").append(date).append("\nStart Time : ").append(startTime).append("\nEnd Time : ").append(endTime);
+
+        return stringBuilder.toString();
     }
 }
