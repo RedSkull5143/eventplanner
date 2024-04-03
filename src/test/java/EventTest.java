@@ -10,7 +10,7 @@ public class EventTest {
     @Test
     public void a(){
         //check the size of Event ArrayList
-        events.add(new Event("Event 1", LocalDate.of(2023, 6, 15), null,null));
+        events.add(new Event("Event 1", LocalDate.of(2023, 6, 15), null,null, null));
         System.out.println(events.size());
         Assert.assertEquals(events.size(),1);
         System.out.println("Test 1");
@@ -19,7 +19,7 @@ public class EventTest {
     @Test
     public void b(){
         //check the details of the Event
-        events.add(new Event("Event 2", LocalDate.of(2023, 6, 15), null,null));
+        events.add(new Event("Event 2", LocalDate.of(2023, 6, 15), null,null, null));
         Assert.assertEquals(events.get(1).getTitle(),"Event 2");
         System.out.println("Test 2");
     }
@@ -30,7 +30,7 @@ public class EventTest {
         //retrieve the event
         //modify its title
         //set it back to the arraylist
-        events.add(new Event("Event 3", LocalDate.of(2023, 6, 15), null, null));
+        events.add(new Event("Event 3", LocalDate.of(2023, 6, 15), null, null, null));
         Event event = events.get(0);
 //        System.out.println(event);
         event.setTitle("Om Shinde");

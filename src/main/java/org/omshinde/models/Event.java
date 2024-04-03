@@ -8,12 +8,14 @@ public class Event {
     private LocalDate date;
     private LocalTime startTime;
     private LocalTime endTime;
+    private String location;
 
-    public Event(String title, LocalDate date, LocalTime startTime, LocalTime endTime){
+    public Event(String title, LocalDate date, LocalTime startTime, LocalTime endTime, String location){
         this.title=title;
         this.date=date;
         this.startTime=startTime;
         this.endTime=endTime;
+        this.location=location;
     }
 
     public String getTitle(){
@@ -48,10 +50,18 @@ public class Event {
         this.endTime = endTime;
     }
 
+    public String getLocation(){
+        return location=location;
+    }
+
+    public void setLocation(String location){
+        this.location=location;
+    }
+
     @Override
     public String toString(){
         StringBuilder stringBuilder=new StringBuilder();
-        stringBuilder.append("Title : ").append(title).append("\nDate : ").append(date).append("\nStart Time : ").append(startTime).append("\nEnd Time : ").append(endTime);
+        stringBuilder.append("Title : ").append(title).append("\nDate : ").append(date).append("\nStart Time : ").append(startTime).append("\nEnd Time : ").append(endTime).append("\nLocation : ").append(location);
 
         return stringBuilder.toString();
     }

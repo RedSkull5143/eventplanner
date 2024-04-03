@@ -4,8 +4,8 @@ import org.omshinde.models.Event;
 
 import java.util.ArrayList;
 
-public class EventSorter {
-    public static void bubbleSortByDate(ArrayList<Event> events){
+public class EventSorterByDate {
+    public void bubbleSortByDate(ArrayList<Event> events){
         int noOfEvents=events.size();
         boolean swapped;
 
@@ -26,5 +26,7 @@ public class EventSorter {
     }
 }
 
-//sort
+//bubble-sort
+//from first element to size-1
+//if value at is greater than right adjacent element, shift
 
